@@ -31,7 +31,10 @@ docker-compose up -d
 ## Optional config:
 
 - for those running docker with `boot2docker` etc (on OS X or Windows for example)
-  set up port forwarding between your machine and the "docker vm". See further.
+  set up port forwarding between your machine and the "docker vm".
+
+  See "Forwarding Ports to a Virtual Machine" in this post:
+  <http://www.howtogeek.com/122641/how-to-forward-ports-to-a-virtual-machine-and-use-it-as-a-server/>
 
 - change the path where your git repositories are. Edit `docker-compose.yml`
   and add a mapping to `volumes` section.
