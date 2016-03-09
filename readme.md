@@ -1,15 +1,15 @@
 # Docker stuff to try out ungit
 
-The original blog post is here: http://blog.goguardian.com/nerds/ungit-the-easiest-way-to-use-git
+The original blog post is here: <http://blog.goguardian.com/nerds/ungit-the-easiest-way-to-use-git>
 
-The original project is here: https://github.com/FredrikNoren/ungit
+The original project is here: <https://github.com/FredrikNoren/ungit>
 
 To try this out without installing anything on your machine etc
 you can use Docker.
 
 ## Quick start with docker
 
-- Install `docker` and `docker-compose`. See docs here: https://docs.docker.com/engine/installation/
+- Install `docker` and `docker-compose`. See docs here: <https://docs.docker.com/engine/installation/>
 
 - Grab this repository
 
@@ -18,10 +18,10 @@ you can use Docker.
 ```
 cd <path to this repo>
 docker-compose build
-docker-compose up -
+docker-compose up -d
 ```
 
-- In the browser go to http://localhost:8448/#/repository
+- In the browser go to <http://localhost:8448/#/repository>
 
 - There is a special path `/vso` which is by default mapped to directory
   in `~/vso` on your machine. This is where you can put all your git repos
