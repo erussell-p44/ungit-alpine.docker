@@ -17,6 +17,8 @@ RUN \
     && echo "ALL DONE"
 
 EXPOSE 8448
-CMD ["/usr/bin/ungit"]
 
-WORKDIR /vso
+# https://docs.docker.com/engine/reference/builder/#workdir
+WORKDIR /git
+
+CMD ["/usr/bin/ungit"]
