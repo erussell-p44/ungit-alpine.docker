@@ -8,8 +8,8 @@ MAINTAINER IPBurger <accounts@ipburger.com>
 # -v ~/.ssh:/home/ungit/.ssh -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent alexdpy/ungit
 
 RUN \
-    echo "Installing node.js and git" \
-    && apk add --update nodejs git \
+    echo "Installing node.js, git and openssh" \
+    && apk add --update nodejs git openssh \
     && echo "Installing ungit with npm" \
     && npm install -g ungit \
     && echo "Cleaning apk..." \
