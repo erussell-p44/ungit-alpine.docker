@@ -16,6 +16,8 @@ RUN \
     && apk del --progress --purge && rm -rf /var/cache/apk/* \
     && echo "ALL DONE"
 
+COPY .ungitrc /root/.ungitrc
+
 EXPOSE 8448
 
 # https://docs.docker.com/engine/reference/builder/#workdir
