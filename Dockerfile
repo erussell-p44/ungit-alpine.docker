@@ -17,4 +17,7 @@ EXPOSE 8448
 # https://docs.docker.com/engine/reference/builder/#workdir
 WORKDIR /git
 
+COPY entry.sh /entry.sh
+ENTRYPOINT ["/entry.sh"]
+
 CMD ["/usr/bin/ungit"]
