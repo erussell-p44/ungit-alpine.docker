@@ -14,7 +14,7 @@ stop() {
     echo "Done."
 }
 
-if find /run/secrets -name '*_private_key*' -printf 1 -quit | grep -q 1; then
+if ls /run/secrets/*_private_key 1> /dev/null 2>&1; then
   cat /run/secrets/${USERNAME}_private_key > /root/${USERNAME}_private_key
   chmod 400 /root/${USERNAME}_private_key
 
