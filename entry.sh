@@ -14,11 +14,8 @@ stop() {
     echo "Done."
 }
 
-if ls /run/secrets/*_private_key 1> /dev/null 2>&1; then
-  cat /run/secrets/${USERNAME}_private_key > /root/${USERNAME}_private_key
-  chmod 400 /root/${USERNAME}_private_key
-
-  git config --global core.sshCommand "ssh -i /root/${USERNAME}_private_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+if ls /run/secrets/private_key 1> /dev/null 2>&1; then
+  git config --global core.sshCommand "ssh -i /run/secrets/private_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 fi
 
 echo "Running $@"
