@@ -20,4 +20,4 @@ WORKDIR /git
 COPY entry.sh /entry.sh
 ENTRYPOINT ["/entry.sh"]
 
-CMD ["/usr/bin/ungit"]
+CMD ["/usr/local/bin/ungit"]

@@ -4,7 +4,7 @@ set -e
 
 [ "$DEBUG" == 'true' ] && set -x
 
-DAEMON=/usr/bin/ungit
+DAEMON=/usr/local/bin/ungit
 
 stop() {
     echo "Received SIGINT or SIGTERM. Shutting down $DAEMON"
