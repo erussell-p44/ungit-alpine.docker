@@ -1,9 +1,9 @@
-FROM alpine:latest
+FROM node:8-alpine
 MAINTAINER IPBurger <accounts@ipburger.com>
 
 RUN \
     echo "Installing node.js, git and openssh" \
-    && apk add --update nodejs git openssh bash \
+    && apk add --update git openssh bash \
     && echo "Installing ungit with npm" \
     && npm install -g ungit \
     && echo "Cleaning apk..." \
