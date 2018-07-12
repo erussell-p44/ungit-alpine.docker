@@ -14,10 +14,6 @@ stop() {
     echo "Done."
 }
 
-if ls /run/secrets/private_key 1> /dev/null 2>&1; then
-  git config --global core.sshCommand "ssh -i /run/secrets/private_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-fi
-
 echo "Running $@"
 if [ "$(basename $1)" == "$DAEMON" ]; then
     trap stop SIGINT SIGTERM
