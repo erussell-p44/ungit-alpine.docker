@@ -1,3 +1,5 @@
+TODO: Replace this text. This is unrelated info from the old project.
+
 # Docker stuff to try out ungit
 
 The original blog post is here: <http://blog.goguardian.com/nerds/ungit-the-easiest-way-to-use-git>
@@ -48,5 +50,3 @@ docker-compose up -d
              # add this line
              - ~/codez/coolproj:/codez/coolproj
 ```
-
-
