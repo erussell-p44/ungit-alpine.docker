@@ -2,7 +2,7 @@ FROM node:8-alpine
 MAINTAINER IPBurger <accounts@ipburger.com>
 
 RUN \
-    echo "Installing node.js, git and openssh" \
+    echo "Installing bash, git and openssh" \
     && apk add --update git openssh bash \
     && echo "Installing ungit with npm" \
     && npm install -g ungit \
