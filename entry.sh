@@ -14,6 +14,9 @@ stop() {
     echo "Done."
 }
 
+git config --global user.email ${GIT_USER_EMAIL:-"unknown-dev@ipburger.com"}
+git config --global user.name ${GIT_USER_NAME:-"Unkown IPBurger Dev"}
+
 echo "Running $@"
 if [ "$(basename $1)" == "$DAEMON" ]; then
     trap stop SIGINT SIGTERM
