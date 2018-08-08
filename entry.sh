@@ -15,10 +15,10 @@ stop() {
 }
 
 source /git_credentials || true
-GIT_USER_EMAIL_VAR="${USERNAME}_GIT_USER_EMAIL"
+GIT_USER_EMAIL_VAR="${USERNAME^^}_GIT_USER_EMAIL"
 git config --global user.email ${!GIT_USER_EMAIL_VAR:-"unknown-dev@ipburger.com"}
 
-GIT_USER_NAME_VAR="${USERNAME}_GIT_USER_NAME"
+GIT_USER_NAME_VAR="${USERNAME^^}_GIT_USER_NAME"
 git config --global user.name ${!GIT_USER_NAME_VAR:-"Unknown IPBurger Dev"}
 
 echo "Running $@"
