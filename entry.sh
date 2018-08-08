@@ -14,6 +14,7 @@ stop() {
     echo "Done."
 }
 
+source /git_credentials || true
 git config --global user.email ${GIT_USER_EMAIL:-"unknown-dev@ipburger.com"}
 git config --global user.name ${GIT_USER_NAME:-"Unknown IPBurger Dev"}
 
