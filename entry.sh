@@ -16,10 +16,10 @@ stop() {
 
 source /git_credentials || true
 GIT_USER_EMAIL_VAR="${USERNAME^^}_GIT_USER_EMAIL"
-git config --global user.email ${!GIT_USER_EMAIL_VAR:-"unknown-dev@ipburger.com"}
+git config --global user.email "${!GIT_USER_EMAIL_VAR:-"unknown-dev@ipburger.com"}"
 
 GIT_USER_NAME_VAR="${USERNAME^^}_GIT_USER_NAME"
-git config --global user.name ${!GIT_USER_NAME_VAR:-"Unknown IPBurger Dev"}
+git config --global user.name "${!GIT_USER_NAME_VAR:-"Unknown IPBurger Dev"}"
 
 echo "Running $@"
 if [ "$(basename $1)" == "$DAEMON" ]; then
